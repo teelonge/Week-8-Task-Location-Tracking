@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Week-8-task</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="poke_id">#00%1$d</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".reactivepokemon.ui.PokemonDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imgPokeDetail"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/loading_status_animation" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sprites" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spritesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/image_detail">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abilities"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtability1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="None" />
+
+                <TextView
+                    android:id="@+id/txtAbility2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="None" />
+
+                <TextView
+                    android:id="@+id/txtAbility3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="None" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtMoves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moves"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/poke_move" />
+
+        </LinearLayout>
+    </ScrollView>
